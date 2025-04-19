@@ -8,37 +8,37 @@ struct Student
 struct Teacher
 {
 	string name;
-	Student student[5]; //Ñ§ÉúÊı×é
+	Student student[5]; //å­¦ç”Ÿæ•°ç»„
 };
-//¸³Óè½ÌÊ¦ĞÅÏ¢µÄº¯Êı
-void allocate(struct Teacher teacher[], int len)
+//èµ‹äºˆæ•™å¸ˆä¿¡æ¯çš„å‡½æ•°
+void allocate(struct Teacher teacher[], int len) //æ­¤å¤„ä½œä¸ºå‡½æ•°å‚æ•°çš„struct Teacher *teacherå’Œstruct Teacher teacher[]çš„ä½œç”¨æ˜¯ä¸€æ ·çš„
 {
-	for (int i = 0; i < len; i++) //µÚÒ»¸öÑ­»·¸øÀÏÊ¦½á¹¹ÌåÊı×éÃ¿¸öÔªËØ¸³Öµ
+	for (int i = 0; i < len; i++) //ç¬¬ä¸€ä¸ªå¾ªç¯ç»™è€å¸ˆç»“æ„ä½“æ•°ç»„æ¯ä¸ªå…ƒç´ èµ‹å€¼
 	{
-		cout << "ÇëÊäÈëµÚ " << i + 1 << " Î»ÀÏÊ¦µÄÃû×Ö£º";
+		cout << "è¯·è¾“å…¥ç¬¬ " << i + 1 << " ä½è€å¸ˆçš„åå­—ï¼š";
 		cin >> teacher[i].name;
 		cout << endl;
-		for (int j = 0; j < 5 ; j++) //µÚ¶ş¸öÑ­»·¸øÃ¿¸öÀÏÊ¦µÄÎå¸öÑ§Éú¸³Öµ
+		for (int j = 0; j < 5 ; j++) //ç¬¬äºŒä¸ªå¾ªç¯ç»™æ¯ä¸ªè€å¸ˆçš„äº”ä¸ªå­¦ç”Ÿèµ‹å€¼
 		{
-			cout << "ËûµÄµÚ " << j+1 << " ¸öÑ§ÉúµÄÃû×Ö£º";
-			cin >> teacher[i].student[j].name; //iºÍjÌåÏÖÁ½¸öÑ­»·µÄ²»Í¬×÷ÓÃ
-			cout << "ËûµÄµÚ " << j+1 << " ¸öÑ§ÉúµÄ·ÖÊı£º";
+			cout << "ä»–çš„ç¬¬ " << j+1 << " ä¸ªå­¦ç”Ÿçš„åå­—ï¼š";
+			cin >> teacher[i].student[j].name; //iå’Œjä½“ç°ä¸¤ä¸ªå¾ªç¯çš„ä¸åŒä½œç”¨
+			cout << "ä»–çš„ç¬¬ " << j+1 << " ä¸ªå­¦ç”Ÿçš„åˆ†æ•°ï¼š";
 			cin >> teacher[i].student[j].score;
 		}
 	}
 }
 void show(struct Teacher teacher[], int len)
 {
-	for (int i = 0; i < len; i++) //µÚÒ»¸öÑ­»·Êä³öÀÏÊ¦½á¹¹ÌåÊı×éÃ¿¸öÀÏÊ¦ÔªËØµÄÖµ
+	for (int i = 0; i < len; i++) //ç¬¬ä¸€ä¸ªå¾ªç¯è¾“å‡ºè€å¸ˆç»“æ„ä½“æ•°ç»„æ¯ä¸ªè€å¸ˆå…ƒç´ çš„å€¼
 	{
-		cout << "µÚ " << i + 1 << " Î»ÀÏÊ¦µÄÃû×Ö£º";
+		cout << "ç¬¬ " << i + 1 << " ä½è€å¸ˆçš„åå­—ï¼š";
 		cout << teacher[i].name;
 		cout << endl;
-		for (int j = 0; j < 5; j++) //µÚ¶ş¸öÑ­»·¸øÃ¿¸öÀÏÊ¦µÄÎå¸öÑ§Éú¸³Öµ
+		for (int j = 0; j < 5; j++) //ç¬¬äºŒä¸ªå¾ªç¯ç»™æ¯ä¸ªè€å¸ˆçš„äº”ä¸ªå­¦ç”Ÿèµ‹å€¼
 		{
-			cout << "ËûµÄµÚ " << j+1 << " ¸öÑ§ÉúµÄÃû×Ö£º";
-			cout << teacher[i].student[j].name; //iºÍjÌåÏÖÁ½¸öÑ­»·µÄ²»Í¬×÷ÓÃ
-			cout << "   ·ÖÊı£º";
+			cout << "ä»–çš„ç¬¬ " << j+1 << " ä¸ªå­¦ç”Ÿçš„åå­—ï¼š";
+			cout << teacher[i].student[j].name; //iå’Œjä½“ç°ä¸¤ä¸ªå¾ªç¯çš„ä¸åŒä½œç”¨
+			cout << "   åˆ†æ•°ï¼š";
 			cout << teacher[i].student[j].score;
 			cout << endl;
 		}

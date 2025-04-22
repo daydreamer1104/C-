@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//½»»»º¯Êı
-//1.Öµ´«µİ
+//äº¤æ¢å‡½æ•°
+//1.å€¼ä¼ é€’
 void mySwap01(int a, int b)
 {
 	int temp = a;
@@ -12,15 +12,15 @@ void mySwap01(int a, int b)
 	//cout << "b= " << b << endl;
 
 }
-//2.µØÖ·´«µİ
+//2.åœ°å€ä¼ é€’
 void mySwap02(int* a, int* b)
 {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
 }
-//3.ÒıÓÃ´«µİ
-void mySwap(int& a, int& b)
+//3.å¼•ç”¨ä¼ é€’
+void mySwap03(int& a, int& b)
 {
 	int temp = a;
 	a = b;
@@ -30,9 +30,9 @@ int main()
 {
 	int a = 10;
 	int b = 20;
-	//mySwap01(a, b); //Öµ´«µİ£¬ĞÎ²Î²»»áĞŞÊÎÊµ²Î
-	//mySwap02(&a, &b); //µØÖ·´«µİ£¬ĞÎ²Î»áĞŞÊÎÊµ²Î
-	mySwap(a, b);
+	//mySwap01(a, b); //å€¼ä¼ é€’ï¼Œå½¢å‚ä¸ä¼šä¿®é¥°å®å‚
+	//mySwap02(&a, &b); //åœ°å€ä¼ é€’ï¼Œå½¢å‚ä¼šä¿®é¥°å®å‚
+	mySwap03(a,b); //å¼•ç”¨ä¼ é€’ï¼Œå½¢å‚ä¹Ÿä¼šä¿®é¥°å®å‚
 	cout << "a= " << a << endl;
 	cout << "b= " << b << endl;
 	return 0;

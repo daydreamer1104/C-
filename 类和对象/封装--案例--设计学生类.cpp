@@ -17,13 +17,13 @@ public:
 	}
 	void showStudent()
 	{
-		cout << "ÐÕÃû£º" << m_name << " " << "Ñ§ºÅ£º" << m_number << endl;
+		cout << "ÃÃ•ÃƒÃ»Â£Âº" << m_name << " " << "Ã‘Â§ÂºÃ…Â£Âº" << m_number << endl;
 	}
 };
 int main()
 {
 	Student s1;
-	s1.setName("ÕÅÈý");
+	s1.setName("Ã•Ã…ÃˆÃ½");
 	s1.setNumber(1);
 	s1.showStudent();
 	return 0;
